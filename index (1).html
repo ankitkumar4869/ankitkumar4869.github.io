@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ankit Kumar — Java Backend Developer specializing in Spring Boot, distributed systems, GCP, Kafka and AI engineering.">
+<title>Ankit Kumar — Backend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08090b;--panel:#101216;--panel2:#15171c;--text:#f4f5f7;--muted:#9da3ae;--line:#252932;--green:#7dffb2;--purple:#9b7cff;--max:1160px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(var(--max),calc(100% - 42px));margin:auto}
+nav{position:fixed;top:0;left:0;right:0;height:72px;z-index:20;background:rgba(8,9,11,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font:500 16px "JetBrains Mono";letter-spacing:-.04em}.logo b{color:var(--green);font-weight:500}
+.navlinks{display:flex;gap:27px;color:var(--muted);font-size:13px}.navlinks a:hover{color:white}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;background:radial-gradient(circle at 80% 25%,rgba(125,255,178,.08),transparent 24%),radial-gradient(circle at 55% 5%,rgba(155,124,255,.12),transparent 30%)}
+.kicker,.section-no{font:500 12px "JetBrains Mono";letter-spacing:.08em;color:var(--green)}
+h1{font-size:clamp(48px,7vw,86px);line-height:.98;letter-spacing:-.065em;max-width:950px;margin:18px 0 28px}
+.gradient{background:linear-gradient(105deg,#fff 25%,#c5b9ff 58%,#7dffb2);-webkit-background-clip:text;color:transparent}
+.hero-copy{max-width:760px;color:var(--muted);font-size:18px}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:30px}
+.btn{border:1px solid var(--line);padding:11px 17px;border-radius:8px;font-size:13px;font-weight:600;transition:.2s}
+.btn:hover{transform:translateY(-2px);border-color:#444955}.btn.primary{background:white;color:#08090b;border-color:white}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:65px;max-width:920px}
+.metric{border:1px solid var(--line);background:rgba(16,18,22,.72);padding:17px;border-radius:10px}
+.metric strong{display:block;font-size:23px;letter-spacing:-.04em}.metric span{color:var(--muted);font-size:11px}
+section{padding:110px 0;border-top:1px solid rgba(255,255,255,.035)}
+.section-title{font-size:clamp(32px,4.2vw,52px);letter-spacing:-.055em;line-height:1.05;margin:12px 0 15px}
+.lead{max-width:710px;color:var(--muted);font-size:16px;margin-bottom:42px}
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+.card{border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#111318,#0d0f13);padding:26px}
+.card h3{font-size:17px;margin-bottom:10px}.card p,.card li{font-size:13px;color:var(--muted)}
+.card ul{padding-left:17px}.card li{margin:7px 0}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{font:11px "JetBrains Mono";color:#d3d7df;background:var(--panel2);border:1px solid var(--line);padding:6px 9px;border-radius:6px}
+.experience{display:grid;gap:17px}
+.role{display:grid;grid-template-columns:220px 1fr;gap:35px;border:1px solid var(--line);padding:28px;border-radius:15px;background:var(--panel)}
+.date{font:11px "JetBrains Mono";color:var(--green)}.company{color:var(--muted);font-size:13px;margin-top:4px}
+.role h3{font-size:20px}.role ul{margin-top:15px;padding-left:18px}.role li{color:var(--muted);font-size:13px;margin:8px 0}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}
+.proof div{padding:18px;border:1px solid var(--line);border-radius:11px}.proof strong{font-size:25px}.proof span{display:block;color:var(--muted);font-size:11px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.project{min-height:240px;display:flex;flex-direction:column;justify-content:space-between}
+.project-top{display:flex;justify-content:space-between;gap:20px}.project-no{font:11px "JetBrains Mono";color:#666d79}
+.project p{color:var(--muted);font-size:13px;margin-top:10px}
+.project a{color:var(--green);font:11px "JetBrains Mono"}
+.education{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.contact{border:1px solid var(--line);border-radius:18px;padding:45px;background:linear-gradient(120deg,rgba(155,124,255,.13),rgba(125,255,178,.05))}
+.contact p{max-width:650px;color:var(--muted);margin:12px 0 25px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#707680;font-size:11px;font-family:"JetBrains Mono"}
+@media(max-width:800px){.navlinks{display:none}.metrics{grid-template-columns:repeat(2,1fr)}.about-grid,.projects,.education{grid-template-columns:1fr}.role{grid-template-columns:1fr;gap:10px}.proof{grid-template-columns:1fr}.hero{min-height:auto;padding:150px 0 90px}}
+@media(max-width:450px){.metrics{grid-template-columns:1fr}h1{font-size:47px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+<a class="logo" href="#home">&lt;ankit<b>/</b>&gt;</a>
+<div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<section class="hero" id="home">
+<div class="container">
+<div class="kicker">JAVA BACKEND ENGINEER · DISTRIBUTED SYSTEMS · AI</div>
+<h1>Engineering <span class="gradient">reliable systems</span> that scale.</h1>
+<p class="hero-copy">I'm Ankit Kumar, a Java backend developer with 2.8+ years of experience building scalable distributed systems, integrations and event-driven services — now extending that foundation into Agentic AI, RAG and modern AI tooling.</p>
+<div class="actions">
+<a class="btn primary" href="#experience">Explore my work ↓</a>
+<a class="btn" href="https://github.com/ankitkumar4869" target="_blank">GitHub ↗</a>
+<a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
+</div>
+<div class="metrics">
+<div class="metric"><strong>2.8+</strong><span>Years experience</span></div>
+<div class="metric"><strong>600+</strong><span>Clients served</span></div>
+<div class="metric"><strong>99.9%</strong><span>Amazon integration uptime</span></div>
+<div class="metric"><strong>&lt;800ms</strong><span>Tracking sync</span></div>
+</div>
+</div>
+</section>
+
+<section id="about"><div class="container">
+<div class="section-no">01 / ABOUT</div>
+<h2 class="section-title">Backend depth. Systems thinking. AI curiosity.</h2>
+<p class="lead">My work sits at the intersection of backend engineering and distributed systems. I care about throughput, reliability, failure handling and clean architecture — while actively applying those fundamentals to AI-powered products.</p>
+<div class="about-grid">
+<div class="card"><h3>What I build</h3><ul>
+<li>High-performance Java and Spring Boot services</li>
+<li>REST APIs and microservice architectures</li>
+<li>Event-driven systems with Kafka and GCP Pub/Sub</li>
+<li>Cloud integrations using Cloud Tasks and Cloud Scheduler</li>
+<li>AI applications using RAG, MCP and Agentic AI tooling</li>
+</ul></div>
+<div class="card"><h3>Engineering mindset</h3><p>I enjoy taking ambiguous integration problems and turning them into reliable, observable systems with clear failure modes, retries, throttling and reconciliation paths.</p></div>
+</div></div></section>
+
+<section id="experience"><div class="container">
+<div class="section-no">02 / EXPERIENCE</div>
+<h2 class="section-title">Production systems, not just side projects.</h2>
+<p class="lead">Experience across e-commerce integrations, fulfillment workflows, APIs and cloud-native event processing.</p>
+<div class="experience">
+<div class="role">
+<div><div class="date">MAY 2024 — PRESENT</div><h3>Software Developer</h3><div class="company">Eshopbox · Pune, India</div></div>
+<div><ul>
+<li>Architected a real-time Shopify integration covering authentication, order/return ingestion and fulfillment sync for <b>600+ clients</b>.</li>
+<li>Designed dynamic per-store Cloud Tasks that self-throttle from API response headers, eliminating recurring <b>429 errors</b> and improving order-sync time by <b>15%</b>.</li>
+<li>Automated Externally Fulfilled Orders, cutting double-processing incidents by <b>30%</b> and removing manual coordination.</li>
+<li>Built a sub-second tracking update pipeline that halts downstream processing in <b>&lt;800ms</b>.</li>
+<li>Built secure Amazon SP-API integrations for OAuth, Orders, Inventory and Returns, achieving <b>99.9% uptime</b>.</li>
+<li>Engineered omni-channel integrations across D365, Browntape, Shopify, Amazon, Myntra and Ajio for unified online/offline order flows.</li>
+<li>Implemented Amazon EventBridge plus reconciliation safety nets for real-time two-way warehouse/Seller Central synchronization.</li>
+</ul>
+<div class="proof"><div><strong>600+</strong><span>clients supported</span></div><div><strong>30%</strong><span>fewer double-processing incidents</span></div><div><strong>15%</strong><span>faster order sync</span></div></div></div>
+</div>
+<div class="role">
+<div><div class="date">AUG 2023 — NOV 2023</div><h3>Java Backend Developer Intern</h3><div class="company">Algospike</div></div>
+<div><ul><li>Developed REST APIs using Spring Boot with MVC architecture and clean coding practices.</li><li>Wrote unit and integration tests using JUnit and Mockito.</li><li>Collaborated with senior developers to debug production issues and implement feature enhancements.</li></ul></div>
+</div>
+</div></div></section>
+
+<section id="projects"><div class="container">
+<div class="section-no">03 / PROJECTS</div>
+<h2 class="section-title">Selected engineering work.</h2>
+<p class="lead">A mix of backend, AI/ML and experimentation work. More projects live on GitHub.</p>
+<div class="projects">
+<div class="card project"><div><div class="project-top"><h3>Eshopbox RAG Chatbot</h3><span class="project-no">01</span></div><p>RAG-based documentation assistant for answering Eshopbox API integration questions using embeddings, vector search and LLMs.</p><div class="skills"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">OpenAI</span><span class="tag">Qdrant</span><span class="tag">RAG</span></div></div><a href="https://github.com/ankitkumar4869" target="_blank">VIEW ON GITHUB ↗</a></div>
+<div class="card project"><div><div class="project-top"><h3>Sentiment Analysis — BERT</h3><span class="project-no">02</span></div><p>NLP project exploring transformer-based sentiment classification with BERT.</p><div class="skills"><span class="tag">Python</span><span class="tag">BERT</span><span class="tag">NLP</span><span class="tag">Transformers</span></div></div><a href="https://github.com/ankitkumar4869" target="_blank">VIEW ON GITHUB ↗</a></div>
+<div class="card project"><div><div class="project-top"><h3>Potato Leaf Disease</h3><span class="project-no">03</span></div><p>Computer vision project applying deep learning to plant disease classification.</p><div class="skills"><span class="tag">Python</span><span class="tag">CNN</span><span class="tag">Deep Learning</span></div></div><a href="https://github.com/ankitkumar4869" target="_blank">VIEW ON GITHUB ↗</a></div>
+<div class="card project"><div><div class="project-top"><h3>House Price Prediction</h3><span class="project-no">04</span></div><p>Machine-learning project focused on predicting housing prices from structured features.</p><div class="skills"><span class="tag">Python</span><span class="tag">Machine Learning</span></div></div><a href="https://github.com/ankitkumar4869" target="_blank">VIEW ON GITHUB ↗</a></div>
+</div></div></section>
+
+<section id="skills"><div class="container">
+<div class="section-no">04 / TOOLKIT</div><h2 class="section-title">Technologies I work with.</h2>
+<div class="about-grid">
+<div class="card"><h3>Backend & Architecture</h3><div class="skills"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Hibernate</span><span class="tag">REST APIs</span><span class="tag">Microservices</span><span class="tag">OOP</span><span class="tag">DSA</span><span class="tag">Event-Driven Architecture</span></div></div>
+<div class="card"><h3>Cloud & Messaging</h3><div class="skills"><span class="tag">GCP</span><span class="tag">Pub/Sub</span><span class="tag">Cloud Tasks</span><span class="tag">Cloud Scheduler</span><span class="tag">Kafka</span><span class="tag">AWS</span><span class="tag">EKS</span><span class="tag">Docker</span><span class="tag">CI/CD</span></div></div>
+<div class="card"><h3>Data</h3><div class="skills"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">MongoDB</span><span class="tag">NoSQL</span></div></div>
+<div class="card"><h3>AI / Developer Tooling</h3><div class="skills"><span class="tag">RAG</span><span class="tag">MCP</span><span class="tag">BERT</span><span class="tag">Transformers</span><span class="tag">NLP</span><span class="tag">Deep Learning</span><span class="tag">GitHub Copilot</span><span class="tag">Claude Code</span></div></div>
+</div></div></section>
+
+<section><div class="container">
+<div class="section-no">05 / EDUCATION</div><h2 class="section-title">Computer Science foundation.</h2>
+<div class="education"><div class="card"><h3>B.Tech — Computer Science & Engineering</h3><p>Indian Institute of Information Technology (IIIT), Pune</p><div class="date" style="margin-top:12px">2019 — 2023</div></div><div class="card"><h3>Core foundation</h3><p>Data Structures & Algorithms · Object-Oriented Programming · Backend Systems · AI / ML</p></div></div>
+</div></section>
+
+<section id="contact"><div class="container"><div class="contact">
+<div class="section-no">06 / CONTACT</div><h2 class="section-title">Let's build something reliable.</h2>
+<p>I'm interested in backend engineering, distributed systems and AI engineering opportunities. The fastest way to reach me is email or GitHub.</p>
+<div class="actions">
+<a class="btn primary" href="mailto:iamakumar4869@gmail.com">iamakumar4869@gmail.com</a>
+<a class="btn" href="https://github.com/ankitkumar4869" target="_blank">GitHub ↗</a>
+<a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
+</div>
+</div></div></section>
+<footer><div class="container">© 2026 Ankit Kumar · Java Backend Engineer · Pune, India</div></footer>
+</body>
+</html>
